@@ -2,45 +2,67 @@ import React, { Component } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 const landingPage = {
-  "header" : {"id": 1, "type": "header", "content": "Welcome to my page!"}
+  "header" : {"id": 1, "type": "header", "content": "Edwin Dela"}
 }
 
 const moveHeader = keyframes`
 0% { 
   color: rgba(255,255,255,0.3); 
-  font-size: 2.3em;
+  left: 0;
 }
 25% { 
   color: rgba(255,255,255,0.5); 
 }
 50% { 
-  color: rgba(255,255,255,0.7); 
-  font-size: 2.5em;
+  color: rgba(255,255,255,0.7);  
+  left: 20px;
 }
 75% { 
   color: rgba(255,255,255,0.5); 
 }
 100% { 
-  color: rgba(255,255,255,0.3); 
-  font-size: 2.3em;
+  color: rgba(255,255,255,0.3);  
+  left: 30px;
 }
 `
-const LandingStyle = styled.div`
-  font-size: 2.4em;
+const LandingBody = styled.div`
+  padding: 3% 0;
+  font-size: 2em;
   color: white;
-  padding: 20%;
+  min-height: 800px;
+  font-family: 'PT Sans Narrow', sans-serif;
   text-align: center;
   background-color: rgba(29,30,40,0.3);
-  animation: ${moveHeader} linear 5s infinite;
-  -webkit-animation: ${moveHeader} linear 5s infinite;
+  // animation: ${moveHeader} linear 5s infinite;
+  // -webkit-animation: ${moveHeader} linear 5s infinite;
 `
+
+const LandingHeader = styled.div`
+font-size: 1.4em;
+color: white;
+margin: 0;
+padding: 0;
+font-family: 'PT Sans Narrow', sans-serif;
+animation: ${moveHeader} linear 5s infinite;
+-webkit-animation: ${moveHeader} linear 5s infinite;
+`
+
 
 export default class Landing extends Component {
   render() {
     return (
-      <LandingStyle>
+      <LandingBody>
         <header><h1>{landingPage.header.content}</h1></header>
-      </LandingStyle>
+        <section>
+          <LandingHeader>
+            <h4>Welcome To My Page</h4>
+          </LandingHeader>
+          <hr />
+          <div>
+            <p>It's a work in progress</p>
+          </div>
+        </section>
+      </LandingBody>
     )
   }
 }
