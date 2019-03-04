@@ -29,12 +29,12 @@ const LandingBody = styled.div`
   padding: 3% 0;
   font-size: 2em;
   color: white;
-  min-height: 800px;
+  min-height: 900px;
   font-family: 'PT Sans Narrow', sans-serif;
   text-align: center;
   background-color: rgba(29,30,40,0.3);
-  // animation: ${moveHeader} linear 5s infinite;
-  // -webkit-animation: ${moveHeader} linear 5s infinite;
+  animation: ${moveHeader} linear 5s infinite;
+  -webkit-animation: ${moveHeader} linear 5s infinite;
 `
 
 const LandingHeader = styled.div`
